@@ -2,14 +2,32 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import Card from '../components/Card.astro'
+import CardSlider from '../components/CardSlider.astro'
 ---
 
 <Layout title="INC TECHNOLOGY- Website Concept">
   <Hero />
   <section
-    class="relative z-10 mx-5 mt-[-100px] flex flex-col drop-shadow-lg lg:flex-row"
+    class="relative z-10 mx-auto mt-[-100px] flex flex-col drop-shadow-lg lg:w-[1340px] lg:flex-row lg:flex-nowrap"
   >
     <Card />
     <Card />
+  </section>
+  <section class="z-10 mx-auto text-white lg:mb-[90px] lg:w-[1340px]">
+    <div
+      class="mb-[90px] flex w-full flex-col-reverse flex-nowrap justify-between align-middle lg:flex-row"
+    >
+      <h2 class="text-[32px] leading-[35.2px]">
+        <u>Creative</u> and <strong class="opacity-[0.3]"
+          >modern strategy</strong
+        ><br />innovation<strong class="opacity-[0.3]"> growth</strong> your company.
+      </h2>
+      <p
+        class="flex items-center font-medium opacity-[0.3] after:inline-block after:h-[1px] after:w-[40px] after:bg-white"
+      >
+        IMPLEMENTATION STAGES
+      </p>
+    </div>
+    <CardSlider />
   </section>
 </Layout>
