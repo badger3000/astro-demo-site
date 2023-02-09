@@ -26,7 +26,7 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
       backgroundImage: {
-        'hero-image': "url('./public/images/hero-image.webp')",
+        'hero-image': "url('/images/hero-image.webp')",
       },
     },
   },
