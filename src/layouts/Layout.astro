@@ -18,6 +18,10 @@ const { title } = Astro.props
       href="https://storage.googleapis.com/production-os-assets/assets/fontawesome/1629704621943/4.7.0/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Plus Jakarta Sans:200,300,400,500,600,700,800,200i,300i,400i,500i,600i,700i,800i"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -30,23 +34,9 @@ const { title } = Astro.props
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: 'Plus Jakarta Sans';
-    src: url('/fonts/PlusJakartaSans-Regular.eot');
-    src: url('/fonts/PlusJakartaSans-Regular.eot?#iefix')
-        format('embedded-opentype'),
-      url('/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
-      url('/fonts/PlusJakartaSans-Regular.woff') format('woff'),
-      url('/fonts/PlusJakartaSans-Regular.ttf') format('truetype'),
-      url('/fonts/PlusJakartaSans-Regular.svg#PlusJakartaSans-Regular')
-        format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
   :root {
     --main-font: 'Plus Jakarta Sans';
+    --secondary-font: 'Lato';
   }
   body {
     background: #181d1f;
