@@ -1,8 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
+import Card from '../components/Card.astro'
 ---
 
 <Layout title="INC TECHNOLOGY- Website Concept">
   <Hero />
+  <section
+    class="relative z-10 mx-5 mt-[-100px] flex flex-col drop-shadow-lg lg:flex-row"
+  >
+    <Card />
+    <Card />
+  </section>
 </Layout>
