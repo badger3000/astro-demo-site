@@ -48,19 +48,9 @@
 
 <style>
   .nav-link {
-    @apply align-middle text-sm transition-all duration-700 ease-in-out;
-  }
-  .nav-link:after {
-    @apply mt-[3px] block h-[2px] w-0 bg-white transition-all ease-in-out;
-    content: '';
-  }
-  .nav-link:hover:after {
-    @apply w-full;
+    @apply align-middle text-sm transition-all duration-1000 ease-in-out after:mt-[3px] after:block after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out hover:after:w-full;
   }
   .burger {
-    @apply before:block before:h-[2px] before:w-[40px] before:bg-white after:mt-[5px] after:block after:h-[2px] after:w-[40px] after:items-end after:bg-white after:transition-all after:ease-in-out;
-  }
-  .burger:hover:after {
-    @apply w-[20px];
+    @apply before:block before:h-[2px] before:w-[40px] before:bg-white after:mt-[5px] after:block after:h-[2px] after:w-[40px] after:items-end after:bg-white after:transition-all after:ease-in-out hover:after:w-[20px];
   }
 </style>
