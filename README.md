@@ -2,7 +2,7 @@
 
 This Astro ([+TailwindCSS](https://tailwindcss.com/)) build is based on [TECHNOLOGY - Website Concept](https://dribbble.com/shots/20370316-TECHNOLOGY-Website-Concept) - by [Tomasz Mazurczak](https://dribbble.com/thomsoon_com) for [STUDIO](https://dribbble.com/studiodesignapp)
 
-[Preview Link](linkhttps://tangerine-tulumba-e9faa0.netlify.app/)
+[Preview Link](https://tangerine-tulumba-e9faa0.netlify.app/)
 
 ## 🧞 Commands
 
