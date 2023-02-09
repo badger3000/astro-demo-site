@@ -1,0 +1,32 @@
+---
+const slideItems = [1, 2, 3, 4]
+---
+
+<div class="flex lg:flex-row">
+  {
+    slideItems.map((slideItem) => {
+      return (
+        <div class="sd">
+          <div class="sd appear">
+            <div class="sd appear">
+              <p class="border-t-dotted flex w-full items-center border-white align-middle">
+                <span class="block first:h-[50px] first:w-[50px] ">1</span>
+              </p>
+            </div>
+            <div class="sd appear" />
+          </div>
+          <div class="sd appear">
+            <h3 class="text sd appear">First Meetings</h3>
+            <div class="richText sd">
+              <p data-uid="fhgPPwi9" data-time="">
+                Contact our representative and choose the{' '}
+                <u>appropriate date</u> for the first meeting with
+                details.&nbsp;Signing the worktime plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      )
+    })
+  }
+</div>

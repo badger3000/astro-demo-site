@@ -2,21 +2,20 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import Card from '../components/Card.astro'
+import CardSlider from '../components/CardSlider.astro'
 ---
 
 <Layout title="INC TECHNOLOGY- Website Concept">
   <Hero />
   <section
-    class="relative z-10 mx-auto mt-[-100px] flex flex-col drop-shadow-lg lg:w-[1340px] lg:flex-row"
+    class="relative z-10 mx-auto mt-[-100px] flex flex-col drop-shadow-lg lg:w-[1340px] lg:flex-row lg:flex-nowrap"
   >
     <Card />
     <Card />
   </section>
-  <section
-    class="relative z-10 mx-auto flex flex-col text-white drop-shadow-lg lg:mb-[90px] lg:w-[1340px] lg:flex-row"
-  >
+  <section class="z-10 mx-auto text-white lg:mb-[90px] lg:w-[1340px]">
     <div
-      class="flex w-full flex-col-reverse flex-nowrap justify-between align-middle lg:flex-row"
+      class="mb-[90px] flex w-full flex-col-reverse flex-nowrap justify-between align-middle lg:flex-row"
     >
       <h2 class="text-[32px] leading-[35.2px]">
         <u>Creative</u> and <strong class="opacity-[0.3]"
@@ -29,5 +28,6 @@ import Card from '../components/Card.astro'
         IMPLEMENTATION STAGES
       </p>
     </div>
+    <CardSlider />
   </section>
 </Layout>
