@@ -2,10 +2,10 @@
 ---
 
 <header
-  class="container flex flex-row flex-nowrap justify-between align-middle border-b-[1px] border-b-white/[.1] min-h-[100px]"
+  class="container flex min-h-[100px] flex-row flex-nowrap justify-between border-b-[1px] border-b-white/[.1] align-middle"
 >
   <img alt="Logo" src="/images/LogoSvg.svg" />
-  <div class="text-white w-auto flex items-center">
+  <div class="flex w-auto items-center text-white">
     <div class="flex flex-row align-middle">
       <div class="flex flex-row flex-nowrap align-middle">
         <div class="mx-6">
@@ -21,25 +21,24 @@
     </div>
     <div class="flex flex-row">
       <div
-        class="ml-20 flex items-center h-[35px] bg-white rounded-3xl hover:bg-[#26ffb1]"
+        class="ml-20 flex h-[35px] items-center rounded-3xl bg-white hover:bg-[#26ffb1]"
       >
-        <a href="#" class="inline-block text-[#181d1f] px-6 font-semibold"
+        <a href="#" class="inline-block px-6 font-semibold text-[#181d1f]"
           >Get Started</a
         >
       </div>
       <div class="ml-4 flex">
         <div
-          class="circle h-[35px] w-[35px] border-white rounded-full border-[2px] flex flex-col justify-center items-center transition-all ease-in-out hover:rotate-45"
+          class="circle flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full border-[2px] border-white transition-all ease-in-out hover:rotate-45"
         >
-          <div class="dash bg-white w-[2px] h-[16px]"></div>
+          <div class="dash h-[16px] w-[2px] bg-white"></div>
         </div>
-        <div>
-          <p
-            class="number bg-red-600 rounded-full h-[18px] w-[18px] flex flex-col ml-[-7px] text-sm justify-center items-center relative z-10"
-          >
-            3
-          </p>
-        </div>
+
+        <p
+          class="number relative z-10 ml-[-7px] flex h-[18px] w-[18px] flex-col items-center justify-center rounded-full bg-red-600 text-sm"
+        >
+          3
+        </p>
       </div>
     </div>
   </div>
@@ -50,8 +49,8 @@
     @apply align-middle;
   }
   .nav-link:after {
-    @apply block h-[2px] bg-white mt-[3px] transition-all w-0 ease-in-out;
-    content: "";
+    @apply mt-[3px] block h-[2px] w-0 bg-white transition-all ease-in-out;
+    content: '';
   }
   .nav-link:hover:after {
     @apply w-full;
