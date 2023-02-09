@@ -1,6 +1,6 @@
 # Astro Demo
 
-Looking to explore Astro development more. This Astro build is based on [TECHNOLOGY - Website Concept](https://preview.studio.site/live/V5a76jGLqR/_nuxt/entry.7a10fa3e.js) - by [Tomasz Mazurczak](https://dribbble.com/thomsoon_com) for [STUDIO](https://dribbble.com/studiodesignapp)
+Looking to explore Astro development more. This Astro build is based on [TECHNOLOGY - Website Concept](https://dribbble.com/shots/20370316-TECHNOLOGY-Website-Concept) - by [Tomasz Mazurczak](https://dribbble.com/thomsoon_com) for [STUDIO](https://dribbble.com/studiodesignapp)
 
 ## 🧞 Commands
 
