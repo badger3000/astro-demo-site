@@ -1,35 +1,47 @@
 ---
+import Navigation from '../components/Navigation.astro'
 export interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('/fonts/PlusJakartaSans-Regular.eot');
+    src: url('/fonts/PlusJakartaSans-Regular.eot?#iefix')
+        format('embedded-opentype'),
+      url('/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+      url('/fonts/PlusJakartaSans-Regular.woff') format('woff'),
+      url('/fonts/PlusJakartaSans-Regular.ttf') format('truetype'),
+      url('/fonts/PlusJakartaSans-Regular.svg#PlusJakartaSans-Regular')
+        format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --main-font: 'Plus Jakarta Sans';
+  }
+  body {
+    background: #181d1f;
+    transition: background 0.5s cubic-bezier(0.4, 0.4, 0, 1);
+  }
 </style>

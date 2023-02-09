@@ -1,0 +1,66 @@
+---
+---
+
+<header
+  class="container flex min-h-[100px] flex-row flex-nowrap justify-between border-b-[1px] border-b-white/[.1] align-middle"
+>
+  <img alt="Logo" src="/images/LogoSvg.svg" />
+  <div class="flex w-auto items-center text-white">
+    <div class="flex flex-row align-middle">
+      <div class="flex flex-row flex-nowrap align-middle">
+        <div class="mx-6">
+          <a href="#" class="nav-link">About technology</a>
+        </div>
+        <div class="px-6">
+          <a href="#" class="nav-link">Pricing</a>
+        </div>
+        <div class="px-6">
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div
+        class="ml-20 flex h-[35px] items-center rounded-3xl bg-white transition-all ease-in-out hover:bg-[#26ffb1]"
+      >
+        <a href="#" class="inline-block px-6 font-semibold text-[#181d1f]"
+          >Get Started</a
+        >
+      </div>
+      <div class="ml-4 flex items-center">
+        <div
+          class="circle flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full border-[2px] border-white transition-all ease-in-out hover:rotate-45"
+        >
+          <div class="dash h-[16px] w-[2px] bg-white"></div>
+        </div>
+
+        <div
+          class="number relative z-10 ml-[-7px] mt-[-20px] flex h-[18px] w-[18px] flex-col items-center justify-center rounded-full bg-red-600 text-sm"
+        >
+          3
+        </div>
+        <div class="burger ml-6 flex h-[12px] flex-col items-end align-middle">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .nav-link {
+    @apply align-middle;
+  }
+  .nav-link:after {
+    @apply mt-[3px] block h-[2px] w-0 bg-white transition-all ease-in-out;
+    content: '';
+  }
+  .nav-link:hover:after {
+    @apply w-full;
+  }
+  .burger {
+    @apply before:block before:h-[2px] before:w-[40px] before:bg-white after:mt-[5px] after:block after:h-[2px] after:w-[40px] after:items-end after:bg-white after:transition-all after:ease-in-out;
+  }
+  .burger:hover:after {
+    @apply w-[20px];
+  }
+</style>
