@@ -4,9 +4,11 @@ const slideItems = [1, 2, 3, 4]
 
 <div class="relative mb-[70px] overflow-hidden">
   <div class="relative overflow-auto rounded-xl">
-    <div class="relative flex w-full snap-x gap-6 overflow-x-auto">
+    <div
+      class="relative flex w-full snap-x snap-proximity gap-6 overflow-x-auto"
+    >
       {
-        slideItems.map((slideItem) => {
+        slideItems.map(() => {
           return (
             <div class="w-3/4 shrink-0 snap-center first:pl-8 last:pr-8 lg:w-auto lg:shrink">
               <div class="relative border-b-[1px] border-dotted pr-[50px]">
