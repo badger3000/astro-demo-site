@@ -2,30 +2,34 @@
 const slideItems = [1, 2, 3, 4]
 ---
 
-<div class="flex lg:flex-row">
-  {
-    slideItems.map((slideItem) => {
-      return (
-        <div>
-          <div>
-            <div class="relative border-t-[1px] border-dotted pr-[50px]">
-              <span class="absolute top-[-20px] left-0 block  rounded-full border-white first:h-[50px] first:w-[50px]">
-                1
-              </span>
+<div class="relative mb-[70px] overflow-hidden">
+  <div class="relative overflow-auto rounded-xl">
+    <div class="relative flex w-full snap-x gap-6 overflow-x-auto">
+      {
+        slideItems.map((slideItem) => {
+          return (
+            <div class="w-3/4 shrink-0 snap-center first:pl-8 last:pr-8 lg:w-auto lg:shrink">
+              <div class="relative border-b-[1px] border-dotted pr-[50px]">
+                <div class="left-0  mb-[-15px] flex h-[30px] w-[30px] rounded-full bg-[#dee777] text-center align-middle leading-[30px]">
+                  <span class="mb-14 inline-block w-full text-[#181d1f] ">
+                    1
+                  </span>
+                </div>
+              </div>
+              <div class="sd appear">
+                <h3 class=" mb-[30px] mt-[45px] text-[24px]">First Meetings</h3>
+                <div class="richText sd">
+                  <p data-uid="fhgPPwi9" data-time="">
+                    Contact our representative and choose the{' '}
+                    <u>appropriate date</u> for the first meeting with
+                    details.&nbsp;Signing the worktime plan.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="sd appear">
-            <h3 class="text sd appear">First Meetings</h3>
-            <div class="richText sd">
-              <p data-uid="fhgPPwi9" data-time="">
-                Contact our representative and choose the{' '}
-                <u>appropriate date</u> for the first meeting with
-                details.&nbsp;Signing the worktime plan.
-              </p>
-            </div>
-          </div>
-        </div>
-      )
-    })
-  }
+          )
+        })
+      }
+    </div>
+  </div>
 </div>
