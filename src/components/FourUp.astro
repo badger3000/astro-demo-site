@@ -1,0 +1,56 @@
+---
+import CardSlider from './CardSlider.astro'
+const slideItems = [
+  {
+    title: 'First Meetings',
+    text: 'Contact our representative and choose the appropriate date for the first meeting with details.&nbsp;Signing the worktime plan.',
+  },
+  {
+    title: 'Analysis Growth',
+    text: 'We will analyze possible successes in your company and provide specific detail with the prices details.',
+  },
+  {
+    title: 'Development',
+    text: 'Beginning of the implementation of selected and appropriate systems along with the transfer of personnel.',
+  },
+  {
+    title: 'Statistics',
+    text: "Detailed analyzes and presentation of charts related to the successes and growth of the company's development.",
+  },
+]
+---
+
+<section
+  class="z-10 mx-auto px-[20px] text-white lg:mb-[90px] lg:w-[1340px] lg:px-0"
+>
+  <div
+    class="mb-[90px] flex w-full flex-col-reverse flex-nowrap justify-between align-middle lg:flex-row"
+  >
+    <h2 class="text-[26px] leading-[35.2px] lg:text-[32px]">
+      <u>Creative</u> and <strong class="opacity-[0.3]">modern strategy</strong
+      ><br />innovation<strong class="opacity-[0.3]"> growth</strong> your company.
+    </h2>
+    <p
+      class="mb-[30px] flex items-center font-medium opacity-[0.3] after:ml-2 after:inline-block after:h-[1px] after:w-[40px] after:bg-white lg:mb-0 lg:after:ml-0"
+    >
+      IMPLEMENTATION STAGES
+    </p>
+  </div>
+  <div class="relative mb-[70px] overflow-hidden">
+    <div class="relative overflow-auto rounded-xl">
+      <div
+        class="relative flex w-full snap-x snap-proximity gap-6 overflow-x-auto"
+      >
+        {
+          slideItems.map((slideItem, i) => (
+            <CardSlider
+              title={slideItem.title}
+              text={slideItem.text}
+              number={i}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
