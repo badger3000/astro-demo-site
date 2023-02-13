@@ -1,37 +1,33 @@
 ---
-const slideItems = [1, 2, 3, 4]
+export interface Props {
+  number?: number
+  title?: string
+  text?: string
+}
+
+const {
+  number = 0,
+  title = 'This is place holder title',
+  text = 'This is place holder body copy',
+} = Astro.props as Props
 ---
 
-<div class="relative mb-[70px] overflow-hidden">
-  <div class="relative overflow-auto rounded-xl">
+<div class="w-3/4 shrink-0 snap-center lg:w-auto lg:shrink">
+  <div class="relative border-b-[1px] border-dotted pr-[50px]">
     <div
-      class="relative flex w-full snap-x snap-proximity gap-6 overflow-x-auto"
+      class="left-0 mb-[-15px] flex h-[30px] w-[30px] rounded-full bg-[#dee777] text-center align-middle leading-[30px]"
     >
-      {
-        slideItems.map(() => {
-          return (
-            <div class="w-3/4 shrink-0 snap-center  lg:w-auto lg:shrink">
-              <div class="relative border-b-[1px] border-dotted pr-[50px]">
-                <div class="left-0  mb-[-15px] flex h-[30px] w-[30px] rounded-full bg-[#dee777] text-center align-middle leading-[30px]">
-                  <span class="mb-14 inline-block w-full text-[#181d1f] ">
-                    1
-                  </span>
-                </div>
-              </div>
-              <div class="sd appear">
-                <h3 class=" mb-[30px] mt-[45px] text-[24px]">First Meetings</h3>
-                <div class="richText sd">
-                  <p data-uid="fhgPPwi9" data-time="">
-                    Contact our representative and choose the{' '}
-                    <u>appropriate date</u> for the first meeting with
-                    details.&nbsp;Signing the worktime plan.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )
-        })
-      }
+      <span class="mb-14 inline-block w-full text-[#181d1f]">
+        {number + 1}
+      </span>
+    </div>
+  </div>
+  <div class="sd appear">
+    <h3 class="mb-[30px] mt-[45px] text-[24px]">
+      {title}
+    </h3>
+    <div class="richText sd">
+      <p>{text}</p>
     </div>
   </div>
 </div>

@@ -1,31 +1,53 @@
 ---
+export interface Props {
+  dark?: boolean
+  numberString?: string
+  text?: string
+  label?: string
+}
+
+const {
+  dark = false,
+  numberString = '38.2M +',
+  text = 'This is place holder body copy',
+  label = 'Label text',
+} = Astro.props as Props
 ---
 
-<div
-  class="mb-5 w-full rounded-3xl bg-[#37464b] p-10 transition-all delay-200 duration-700 ease-in-out odd:delay-700 lg:mx-auto lg:mb-[90px] lg:w-1/2 lg:odd:mr-5"
->
-  <div class="mb-[75px] flex flex-row flex-nowrap justify-between align-middle">
-    <p class="text-[60px] text-[#26ffb1]">38.2M +</p>
-    <div
-      class="flex h-[30px] w-[30px] flex-col items-center rounded-full bg-[#26ffb1]"
-    >
-      <div>
-        <i class="fa fa-arrow-up inline-block"></i>
+<div class={`card ${dark && 'dark'}`}>
+  <div class="p-10">
+    <div class="flex flex-row flex-nowrap justify-between align-middle">
+      <p class="text-[60px] text-[#26ffb1]">{numberString}</p>
+      <div
+        class="flex h-[30px] w-[30px] flex-col items-center rounded-full bg-[#26ffb1]"
+      >
+        <div>
+          <i class="fa fa-arrow-up inline-block"></i>
+        </div>
       </div>
     </div>
   </div>
   <p
-    class="mb-[20px] border-b-[1px] border-[rgba(255,255,255,0.3)] pb-5 leading-[24px] text-[rgba(255,255,255,0.8)] lg:tracking-[-0.01]"
+    class="p-10 leading-[24px] text-[rgba(255,255,255,0.8)] lg:tracking-[-0.01]"
   >
-    Implementations to the telecommunications and <u>banking system</u> and the latest
-    update to the user panel systems.
+    {text}
   </p>
-  <div class="flex flex-row flex-nowrap justify-between text-white">
+  <div
+    class="flex flex-row flex-nowrap justify-between border-t-[1px] border-[rgba(255,255,255,0.3)] px-10 pt-[20px] pb-[35px] text-white"
+  >
     <i class="icon fa fa-asterisk text-white" aria-hidden="true"></i>
     <div
       class="rounded-full border-[1px] border-[rgba(255,255,255,0.3)] px-6 text-[14px] font-light"
     >
-      <p class="text sd appear">DEVELOPMENT SYSTEM</p>
+      <p class="text sd appear">{label}</p>
     </div>
   </div>
 </div>
+<style>
+  .card {
+    @apply mb-5 w-full rounded-3xl bg-[#37464b]  transition-all delay-200 duration-700 ease-in-out odd:delay-700 lg:mx-auto lg:mb-[90px] lg:w-1/2 lg:odd:mr-5;
+  }
+  .dark {
+    @apply border-[1px] border-[#37464b] bg-[#181d1f];
+  }
+</style>
