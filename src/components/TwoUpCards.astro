@@ -1,0 +1,32 @@
+---
+import Card from './Card.astro'
+const cardsContent = [
+  {
+    dark: false,
+    numberString: '38.2M +',
+    text: 'Implementations to the telecommunications and banking system and the latest update to the user panel systems',
+    label: 'DEVELOPMENT SYSTEM',
+  },
+  {
+    dark: true,
+    numberString: '+ 40%',
+    text: 'Possible increase in the effectiveness of the company operations after the implementation of recommendations software.',
+    label: 'SAFE BANKING SYSTEM',
+  },
+]
+---
+
+<section
+  class="relative z-10 mx-auto mt-[-100px] flex flex-col px-[10px] drop-shadow-lg lg:w-[1340px] lg:flex-row lg:flex-nowrap lg:px-0"
+>
+  {
+    cardsContent.map((cardContent) => (
+      <Card
+        dark={cardContent.dark}
+        numberString={cardContent.numberString}
+        text={cardContent.text}
+        label={cardContent.label}
+      />
+    ))
+  }
+</section>

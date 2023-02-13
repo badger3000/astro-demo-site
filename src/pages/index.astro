@@ -1,17 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
-import Card from '../components/Card.astro'
+import TwoUpCards from '../components/TwoUpCards.astro'
 import FourUp from '../components/FourUp.astro'
 ---
 
 <Layout title="INC TECHNOLOGY- Website Concept">
   <Hero />
-  <section
-    class="relative z-10 mx-auto mt-[-100px] flex flex-col px-[10px] drop-shadow-lg lg:w-[1340px] lg:flex-row lg:flex-nowrap lg:px-0"
-  >
-    <Card />
-    <Card />
-  </section>
+  <TwoUpCards />
   <FourUp />
 </Layout>
